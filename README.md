@@ -11,14 +11,14 @@ Very nice UIScrollView ready to handle View Controllers as pages, handle orienta
 
 ## Screenshots
 
-![iPad](Screenshots/iPad/IMG_0001.png)
-![iPad](Screenshots/iPad/IMG_0002.png)
-![iPad](Screenshots/iPad/IMG_0003.png)
-![iPad](Screenshots/iPad/IMG_0004.png)
-![iPhone](Screenshots/iPhone/IMG_0745.png)
-![iPhone](Screenshots/iPhone/IMG_0746.png)
-![iPhone](Screenshots/iPhone/IMG_0747.png)
-![iPhone](Screenshots/iPhone/IMG_0748.png)
+![iPad](/firebaseco/FireUIPagedScrollView/raw/master/Screenshots/iPad/IMG_0001.png)
+![iPad](/firebaseco/FireUIPagedScrollView/raw/master/Screenshots/iPad/IMG_0002.png)
+![iPad](/firebaseco/FireUIPagedScrollView/raw/master/Screenshots/iPad/IMG_0003.png)
+![iPad](/firebaseco/FireUIPagedScrollView/raw/master/Screenshots/iPad/IMG_0004.png)
+![iPhone](/firebaseco/FireUIPagedScrollView/raw/master/Screenshots/iPhone/IMG_0745.png)
+![iPhone](/firebaseco/FireUIPagedScrollView/raw/master/Screenshots/iPhone/IMG_0746.png)
+![iPhone](/firebaseco/FireUIPagedScrollView/raw/master/Screenshots/iPhone/IMG_0747.png)
+![iPhone](/firebaseco/FireUIPagedScrollView/raw/master/Screenshots/iPhone/IMG_0748.png)
 ## Example
 
 Let's setup you have three View controllers that you want to show as pages as follows:
