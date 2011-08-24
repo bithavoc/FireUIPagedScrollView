@@ -1,0 +1,373 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07B852B01404D70F00047EFD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B852AF1404D70F00047EFD /* UIKit.framework */; };
+		07B852B21404D70F00047EFD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B852B11404D70F00047EFD /* Foundation.framework */; };
+		07B852B41404D70F00047EFD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B852B31404D70F00047EFD /* CoreGraphics.framework */; };
+		07B852BA1404D71100047EFD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07B852B81404D71100047EFD /* InfoPlist.strings */; };
+		07B852BC1404D71100047EFD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B852BB1404D71100047EFD /* main.m */; };
+		07B852C01404D71200047EFD /* FireUIPagedScrollViewiPadSampleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B852BF1404D71200047EFD /* FireUIPagedScrollViewiPadSampleAppDelegate.m */; };
+		07B852CC1404D71500047EFD /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B852CB1404D71500047EFD /* RootViewController.m */; };
+		07B852E71405424200047EFD /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07B852E61405424200047EFD /* MainWindow.xib */; };
+		07B852F01405433B00047EFD /* WelcomeDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B852EE1405433B00047EFD /* WelcomeDetailsController.m */; };
+		07B852F11405433B00047EFD /* WelcomeDetailsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07B852EF1405433B00047EFD /* WelcomeDetailsController.xib */; };
+		07B852F31405448700047EFD /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07B852F21405448600047EFD /* RootViewController.xib */; };
+		07B852FB1405470A00047EFD /* FireUIPagedScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B852FA1405470A00047EFD /* FireUIPagedScrollView.m */; };
+		07B853001405476B00047EFD /* SimpleSampleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B852FE1405476B00047EFD /* SimpleSampleView.m */; };
+		07B853011405476B00047EFD /* SimpleSampleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07B852FF1405476B00047EFD /* SimpleSampleView.xib */; };
+		07B8530614054C2C00047EFD /* Page1View.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B8530414054C2C00047EFD /* Page1View.m */; };
+		07B8530714054C2C00047EFD /* Page1View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07B8530514054C2C00047EFD /* Page1View.xib */; };
+		07B8530B14054FDD00047EFD /* Page2View.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B8530914054FD800047EFD /* Page2View.m */; };
+		07B8530C14054FDD00047EFD /* Page2View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07B8530A14054FDA00047EFD /* Page2View.xib */; };
+		07B85310140551E400047EFD /* Page3View.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B8530E140551E200047EFD /* Page3View.m */; };
+		07B85311140551E400047EFD /* Page3View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07B8530F140551E300047EFD /* Page3View.xib */; };
+		07B8531F1405544800047EFD /* VisualsReadySampleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B8531D1405544800047EFD /* VisualsReadySampleView.m */; };
+		07B853201405544800047EFD /* VisualsReadySampleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07B8531E1405544800047EFD /* VisualsReadySampleView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		07B852AB1404D70F00047EFD /* FireUIPagedScrollViewiPadSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireUIPagedScrollViewiPadSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		07B852AF1404D70F00047EFD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		07B852B11404D70F00047EFD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		07B852B31404D70F00047EFD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		07B852B71404D71000047EFD /* FireUIPagedScrollViewiPadSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FireUIPagedScrollViewiPadSample-Info.plist"; sourceTree = "<group>"; };
+		07B852B91404D71100047EFD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		07B852BB1404D71100047EFD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		07B852BD1404D71100047EFD /* FireUIPagedScrollViewiPadSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FireUIPagedScrollViewiPadSample-Prefix.pch"; sourceTree = "<group>"; };
+		07B852BE1404D71200047EFD /* FireUIPagedScrollViewiPadSampleAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FireUIPagedScrollViewiPadSampleAppDelegate.h; sourceTree = "<group>"; };
+		07B852BF1404D71200047EFD /* FireUIPagedScrollViewiPadSampleAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FireUIPagedScrollViewiPadSampleAppDelegate.m; sourceTree = "<group>"; };
+		07B852CA1404D71500047EFD /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		07B852CB1404D71500047EFD /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		07B852E61405424200047EFD /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		07B852ED1405433B00047EFD /* WelcomeDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeDetailsController.h; sourceTree = "<group>"; };
+		07B852EE1405433B00047EFD /* WelcomeDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeDetailsController.m; sourceTree = "<group>"; };
+		07B852EF1405433B00047EFD /* WelcomeDetailsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeDetailsController.xib; sourceTree = "<group>"; };
+		07B852F21405448600047EFD /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		07B852F91405470A00047EFD /* FireUIPagedScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FireUIPagedScrollView.h; path = ../../Lib/FireUIPagedScrollView.h; sourceTree = "<group>"; };
+		07B852FA1405470A00047EFD /* FireUIPagedScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FireUIPagedScrollView.m; path = ../../Lib/FireUIPagedScrollView.m; sourceTree = "<group>"; };
+		07B852FD1405476B00047EFD /* SimpleSampleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleSampleView.h; sourceTree = "<group>"; };
+		07B852FE1405476B00047EFD /* SimpleSampleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleSampleView.m; sourceTree = "<group>"; };
+		07B852FF1405476B00047EFD /* SimpleSampleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleSampleView.xib; sourceTree = "<group>"; };
+		07B8530314054C2C00047EFD /* Page1View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page1View.h; sourceTree = "<group>"; };
+		07B8530414054C2C00047EFD /* Page1View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page1View.m; sourceTree = "<group>"; };
+		07B8530514054C2C00047EFD /* Page1View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Page1View.xib; sourceTree = "<group>"; };
+		07B8530814054FD800047EFD /* Page2View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page2View.h; sourceTree = "<group>"; };
+		07B8530914054FD800047EFD /* Page2View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page2View.m; sourceTree = "<group>"; };
+		07B8530A14054FDA00047EFD /* Page2View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Page2View.xib; sourceTree = "<group>"; };
+		07B8530D140551E200047EFD /* Page3View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page3View.h; sourceTree = "<group>"; };
+		07B8530E140551E200047EFD /* Page3View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page3View.m; sourceTree = "<group>"; };
+		07B8530F140551E300047EFD /* Page3View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Page3View.xib; sourceTree = "<group>"; };
+		07B8531C1405544800047EFD /* VisualsReadySampleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisualsReadySampleView.h; sourceTree = "<group>"; };
+		07B8531D1405544800047EFD /* VisualsReadySampleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VisualsReadySampleView.m; sourceTree = "<group>"; };
+		07B8531E1405544800047EFD /* VisualsReadySampleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VisualsReadySampleView.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		07B852A81404D70E00047EFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07B852B01404D70F00047EFD /* UIKit.framework in Frameworks */,
+				07B852B21404D70F00047EFD /* Foundation.framework in Frameworks */,
+				07B852B41404D70F00047EFD /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07B852A01404D70A00047EFD = {
+			isa = PBXGroup;
+			children = (
+				07B852F4140546DE00047EFD /* Lib */,
+				07B852B51404D70F00047EFD /* FireUIPagedScrollViewiPadSample */,
+				07B852AE1404D70F00047EFD /* Frameworks */,
+				07B852AC1404D70F00047EFD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		07B852AC1404D70F00047EFD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07B852AB1404D70F00047EFD /* FireUIPagedScrollViewiPadSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		07B852AE1404D70F00047EFD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07B852AF1404D70F00047EFD /* UIKit.framework */,
+				07B852B11404D70F00047EFD /* Foundation.framework */,
+				07B852B31404D70F00047EFD /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		07B852B51404D70F00047EFD /* FireUIPagedScrollViewiPadSample */ = {
+			isa = PBXGroup;
+			children = (
+				07B853161405541500047EFD /* VisualsReadySample */,
+				07B8530214054BD800047EFD /* Pages */,
+				07B852FC1405471200047EFD /* SimpleSample */,
+				07B852BE1404D71200047EFD /* FireUIPagedScrollViewiPadSampleAppDelegate.h */,
+				07B852BF1404D71200047EFD /* FireUIPagedScrollViewiPadSampleAppDelegate.m */,
+				07B852CA1404D71500047EFD /* RootViewController.h */,
+				07B852CB1404D71500047EFD /* RootViewController.m */,
+				07B852F21405448600047EFD /* RootViewController.xib */,
+				07B852B61404D71000047EFD /* Supporting Files */,
+				07B852E61405424200047EFD /* MainWindow.xib */,
+				07B852ED1405433B00047EFD /* WelcomeDetailsController.h */,
+				07B852EE1405433B00047EFD /* WelcomeDetailsController.m */,
+				07B852EF1405433B00047EFD /* WelcomeDetailsController.xib */,
+			);
+			path = FireUIPagedScrollViewiPadSample;
+			sourceTree = "<group>";
+		};
+		07B852B61404D71000047EFD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07B852B71404D71000047EFD /* FireUIPagedScrollViewiPadSample-Info.plist */,
+				07B852B81404D71100047EFD /* InfoPlist.strings */,
+				07B852BB1404D71100047EFD /* main.m */,
+				07B852BD1404D71100047EFD /* FireUIPagedScrollViewiPadSample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		07B852F4140546DE00047EFD /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				07B852F91405470A00047EFD /* FireUIPagedScrollView.h */,
+				07B852FA1405470A00047EFD /* FireUIPagedScrollView.m */,
+			);
+			name = Lib;
+			sourceTree = "<group>";
+		};
+		07B852FC1405471200047EFD /* SimpleSample */ = {
+			isa = PBXGroup;
+			children = (
+				07B852FD1405476B00047EFD /* SimpleSampleView.h */,
+				07B852FE1405476B00047EFD /* SimpleSampleView.m */,
+				07B852FF1405476B00047EFD /* SimpleSampleView.xib */,
+			);
+			name = SimpleSample;
+			sourceTree = "<group>";
+		};
+		07B8530214054BD800047EFD /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				07B8530314054C2C00047EFD /* Page1View.h */,
+				07B8530414054C2C00047EFD /* Page1View.m */,
+				07B8530514054C2C00047EFD /* Page1View.xib */,
+				07B8530814054FD800047EFD /* Page2View.h */,
+				07B8530914054FD800047EFD /* Page2View.m */,
+				07B8530A14054FDA00047EFD /* Page2View.xib */,
+				07B8530D140551E200047EFD /* Page3View.h */,
+				07B8530E140551E200047EFD /* Page3View.m */,
+				07B8530F140551E300047EFD /* Page3View.xib */,
+			);
+			name = Pages;
+			sourceTree = "<group>";
+		};
+		07B853161405541500047EFD /* VisualsReadySample */ = {
+			isa = PBXGroup;
+			children = (
+				07B8531C1405544800047EFD /* VisualsReadySampleView.h */,
+				07B8531D1405544800047EFD /* VisualsReadySampleView.m */,
+				07B8531E1405544800047EFD /* VisualsReadySampleView.xib */,
+			);
+			name = VisualsReadySample;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		07B852AA1404D70E00047EFD /* FireUIPagedScrollViewiPadSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07B852CF1404D71700047EFD /* Build configuration list for PBXNativeTarget "FireUIPagedScrollViewiPadSample" */;
+			buildPhases = (
+				07B852A71404D70E00047EFD /* Sources */,
+				07B852A81404D70E00047EFD /* Frameworks */,
+				07B852A91404D70E00047EFD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FireUIPagedScrollViewiPadSample;
+			productName = FireUIPagedScrollViewiPadSample;
+			productReference = 07B852AB1404D70F00047EFD /* FireUIPagedScrollViewiPadSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		07B852A21404D70A00047EFD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = Firebase;
+			};
+			buildConfigurationList = 07B852A51404D70C00047EFD /* Build configuration list for PBXProject "FireUIPagedScrollViewiPadSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 07B852A01404D70A00047EFD;
+			productRefGroup = 07B852AC1404D70F00047EFD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				07B852AA1404D70E00047EFD /* FireUIPagedScrollViewiPadSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		07B852A91404D70E00047EFD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07B852BA1404D71100047EFD /* InfoPlist.strings in Resources */,
+				07B852E71405424200047EFD /* MainWindow.xib in Resources */,
+				07B852F11405433B00047EFD /* WelcomeDetailsController.xib in Resources */,
+				07B852F31405448700047EFD /* RootViewController.xib in Resources */,
+				07B853011405476B00047EFD /* SimpleSampleView.xib in Resources */,
+				07B8530714054C2C00047EFD /* Page1View.xib in Resources */,
+				07B8530C14054FDD00047EFD /* Page2View.xib in Resources */,
+				07B85311140551E400047EFD /* Page3View.xib in Resources */,
+				07B853201405544800047EFD /* VisualsReadySampleView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		07B852A71404D70E00047EFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07B852BC1404D71100047EFD /* main.m in Sources */,
+				07B852C01404D71200047EFD /* FireUIPagedScrollViewiPadSampleAppDelegate.m in Sources */,
+				07B852CC1404D71500047EFD /* RootViewController.m in Sources */,
+				07B852F01405433B00047EFD /* WelcomeDetailsController.m in Sources */,
+				07B852FB1405470A00047EFD /* FireUIPagedScrollView.m in Sources */,
+				07B853001405476B00047EFD /* SimpleSampleView.m in Sources */,
+				07B8530614054C2C00047EFD /* Page1View.m in Sources */,
+				07B8530B14054FDD00047EFD /* Page2View.m in Sources */,
+				07B85310140551E400047EFD /* Page3View.m in Sources */,
+				07B8531F1405544800047EFD /* VisualsReadySampleView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		07B852B81404D71100047EFD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07B852B91404D71100047EFD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		07B852CD1404D71600047EFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		07B852CE1404D71600047EFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		07B852D01404D71700047EFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FireUIPagedScrollViewiPadSample/FireUIPagedScrollViewiPadSample-Prefix.pch";
+				INFOPLIST_FILE = "FireUIPagedScrollViewiPadSample/FireUIPagedScrollViewiPadSample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		07B852D11404D71700047EFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FireUIPagedScrollViewiPadSample/FireUIPagedScrollViewiPadSample-Prefix.pch";
+				INFOPLIST_FILE = "FireUIPagedScrollViewiPadSample/FireUIPagedScrollViewiPadSample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		07B852A51404D70C00047EFD /* Build configuration list for PBXProject "FireUIPagedScrollViewiPadSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07B852CD1404D71600047EFD /* Debug */,
+				07B852CE1404D71600047EFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07B852CF1404D71700047EFD /* Build configuration list for PBXNativeTarget "FireUIPagedScrollViewiPadSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07B852D01404D71700047EFD /* Debug */,
+				07B852D11404D71700047EFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 07B852A21404D70A00047EFD /* Project object */;
+}
