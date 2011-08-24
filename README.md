@@ -11,14 +11,15 @@ Very nice UIScrollView ready to handle View Controllers as pages, handle orienta
 
 ## Screenshots
 
-![iPad](/firebaseco/FireUIPagedScrollView/raw/master/Screenshots/iPad/IMG_0001.png)
-![iPad](/firebaseco/FireUIPagedScrollView/raw/master/Screenshots/iPad/IMG_0002.png)
-![iPad](/firebaseco/FireUIPagedScrollView/raw/master/Screenshots/iPad/IMG_0003.png)
-![iPad](/firebaseco/FireUIPagedScrollView/raw/master/Screenshots/iPad/IMG_0004.png)
-![iPhone](/firebaseco/FireUIPagedScrollView/raw/master/Screenshots/iPhone/IMG_0745.png)
-![iPhone](/firebaseco/FireUIPagedScrollView/raw/master/Screenshots/iPhone/IMG_0746.png)
-![iPhone](/firebaseco/FireUIPagedScrollView/raw/master/Screenshots/iPhone/IMG_0747.png)
-![iPhone](/firebaseco/FireUIPagedScrollView/raw/master/Screenshots/iPhone/IMG_0748.png)
+![iPad](http://github.com/firebaseco/FireUIPagedScrollView/raw/master/Screenshots/iPad/IMG_0001.PNG)
+![iPad](http://github.com/firebaseco/FireUIPagedScrollView/raw/master/Screenshots/iPad/IMG_0002.PNG)
+![iPad](http://github.com/firebaseco/FireUIPagedScrollView/raw/master/Screenshots/iPad/IMG_0003.PNG)
+![iPad](http://github.com/firebaseco/FireUIPagedScrollView/raw/master/Screenshots/iPad/IMG_0004.PNG)
+![iPhone](http://github.com/firebaseco/FireUIPagedScrollView/raw/master/Screenshots/iPhone/IMG_0745.PNG)
+![iPhone](http://github.com/firebaseco/FireUIPagedScrollView/raw/master/Screenshots/iPhone/IMG_0746.PNG)
+![iPhone](http://github.com/firebaseco/FireUIPagedScrollView/raw/master/Screenshots/iPhone/IMG_0747.PNG)
+![iPhone](http://github.com/firebaseco/FireUIPagedScrollView/raw/master/Screenshots/iPhone/IMG_0748.PNG)
+
 ## Example
 
 Let's setup you have three View controllers that you want to show as pages as follows:
