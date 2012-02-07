@@ -12,9 +12,11 @@
 @interface FireUIPagedScrollView(hidden)
 -(void)_niceInit;
 -(void)_adjustSizesForPages;
+-(void)_adjustSizesForPages:(BOOL)animated;
 -(void)_notifyPageChanged;
 -(void)_showPage:(NSInteger)pageIndex animated:(BOOL)animated;
-
+-(void)_adjustSizesForPagesCoreInit;
+-(void)_adjustSizesForPagesCoreCompletion;
 @end
 
 @implementation FireUIPagedScrollView
@@ -69,35 +71,58 @@
     [super dealloc];
 }
 
--(void)addPagedViewController:(UIViewController*)controller {
+
+-(void)addPagedViewController:(UIViewController*)controller 
+{
+    [self addPagedViewController:controller animated:YES];
+}
+
+-(void)addPagedViewController:(UIViewController*)controller animated:(BOOL)animated
+{
     if(controller != nil && controller.view != nil) {
         [_controllers addObject:controller];
         [self addSubview:controller.view];
-        [self _adjustSizesForPages];
+        [self _adjustSizesForPages:animated];
         [self _notifyPageChanged];
     }
 }
 
 -(void)_adjustSizesForPages {
-    [UIView animateWithDuration:0.5
-                          delay: 0.0
-                        options: UIViewAnimationOptionCurveEaseIn
-                     animations:^{
-                         CGSize currentSize = self.frame.size;
-                         NSInteger loopPageNumber = 0;
-                         for (UIViewController * controller in _controllers) {
-                             [controller.view setFrame:CGRectMake(currentSize.width * loopPageNumber, 0, currentSize.width, currentSize.height)];
-                             loopPageNumber++;
-                         }
-                         [self setContentSize:CGSizeMake(currentSize.width * loopPageNumber, currentSize.height)];
-                     }
-                     completion:^(BOOL finished){
-                         _dontInferPagesFromScrollRange = NO;
-                         [self _showPage:self.currentPage animated:YES];
-                     }];
-    
-    
+    [self _adjustSizesForPages:YES];
 }
+
+-(void)_adjustSizesForPages:(BOOL)animated {
+    if(animated) {
+        [UIView animateWithDuration:0.5
+                              delay: 0.0
+                            options: UIViewAnimationOptionCurveEaseIn
+                         animations:^{
+                             [self _adjustSizesForPagesCoreInit];
+                         }
+                         completion:^(BOOL finished){
+                             [self _adjustSizesForPagesCoreCompletion];
+                         }];
+    } else {
+        [self _adjustSizesForPagesCoreInit];
+        [self _adjustSizesForPagesCoreCompletion];
+    }
+}
+
+-(void)_adjustSizesForPagesCoreInit {
+    CGSize currentSize = self.frame.size;
+    NSInteger loopPageNumber = 0;
+    for (UIViewController * controller in _controllers) {
+        [controller.view setFrame:CGRectMake(currentSize.width * loopPageNumber, 0, currentSize.width, currentSize.height)];
+        loopPageNumber++;
+    }
+    [self setContentSize:CGSizeMake(currentSize.width * loopPageNumber, currentSize.height)];
+}
+
+-(void)_adjustSizesForPagesCoreCompletion {
+    _dontInferPagesFromScrollRange = NO;
+    [self _showPage:self.currentPage animated:NO];
+}
+
 
 - (void)scrollViewDidScroll:(UIScrollView *)sender {
     if(!_dontInferPagesFromScrollRange) {

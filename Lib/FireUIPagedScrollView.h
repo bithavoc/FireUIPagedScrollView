@@ -38,6 +38,9 @@
 // Adds a Controller.
 -(void)addPagedViewController:(UIViewController*)controller;
 
+// Adds a Controller indicating whether the action should be animated.
+-(void)addPagedViewController:(UIViewController*)controller animated:(BOOL)animated;
+
 // Shows a Specific Page Index
 -(void)gotoPage:(NSInteger)pageIndex animated:(BOOL)animated;
 
