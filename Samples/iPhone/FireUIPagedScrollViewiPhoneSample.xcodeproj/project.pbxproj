@@ -321,7 +321,7 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -338,7 +338,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -352,6 +352,7 @@
 		07B852781404BFFB00047EFD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FireUIPagedScrollViewiPhoneSample/FireUIPagedScrollViewiPhoneSample-Prefix.pch";
 				INFOPLIST_FILE = "FireUIPagedScrollViewiPhoneSample/FireUIPagedScrollViewiPhoneSample-Info.plist";
@@ -363,6 +364,7 @@
 		07B852791404BFFB00047EFD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FireUIPagedScrollViewiPhoneSample/FireUIPagedScrollViewiPhoneSample-Prefix.pch";
 				INFOPLIST_FILE = "FireUIPagedScrollViewiPhoneSample/FireUIPagedScrollViewiPhoneSample-Info.plist";
@@ -390,6 +392,7 @@
 				07B852791404BFFB00047EFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

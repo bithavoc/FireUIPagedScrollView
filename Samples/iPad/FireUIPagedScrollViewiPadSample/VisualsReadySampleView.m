@@ -21,9 +21,9 @@
      Nothing to see here hehe, everything was made in Interface Builder :) If you want to use UIPageControl or UISegmentedControl you can use Interface Builder to assign the outlets properties pageControl and segmentedControl.
      */
     
-    [self.pagedScrollView addPagedViewController:[[[Page1View alloc] initWithNibName:@"Page1View" bundle:nil] autorelease]];
-    [self.pagedScrollView addPagedViewController:[[[Page2View alloc] initWithNibName:@"Page2View" bundle:nil] autorelease]];
-    [self.pagedScrollView addPagedViewController:[[[Page3View alloc] initWithNibName:@"Page3View" bundle:nil] autorelease]];
+    [self.pagedScrollView addPagedViewController:[[Page1View alloc] initWithNibName:@"Page1View" bundle:nil]];
+    [self.pagedScrollView addPagedViewController:[[Page2View alloc] initWithNibName:@"Page2View" bundle:nil]];
+    [self.pagedScrollView addPagedViewController:[[Page3View alloc] initWithNibName:@"Page3View" bundle:nil]];
 }
 
 - (void)viewDidUnload

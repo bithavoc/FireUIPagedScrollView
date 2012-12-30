@@ -21,13 +21,13 @@
     self.title = @"Simple Demo";
     
     // Add Page 1
-    [self.pagedScrollView addPagedViewController:[[[SimplePage1View alloc] initWithNibName:@"SimplePage1View" bundle:nil] autorelease]];
+    [self.pagedScrollView addPagedViewController:[[SimplePage1View alloc] initWithNibName:@"SimplePage1View" bundle:nil]];
     
     // Add Page 2
-    [self.pagedScrollView addPagedViewController:[[[SimplePage2View alloc] initWithNibName:@"SimplePage2View" bundle:nil] autorelease]];
+    [self.pagedScrollView addPagedViewController:[[SimplePage2View alloc] initWithNibName:@"SimplePage2View" bundle:nil] ];
     
     // Add Page 3
-    [self.pagedScrollView addPagedViewController:[[[SimplePage3View alloc] initWithNibName:@"SimplePage3View" bundle:nil] autorelease]];
+    [self.pagedScrollView addPagedViewController:[[SimplePage3View alloc] initWithNibName:@"SimplePage3View" bundle:nil] ];
 }
 
 - (void)viewDidUnload

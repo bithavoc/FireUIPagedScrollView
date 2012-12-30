@@ -10,6 +10,7 @@
 #import "FireUIPagedScrollView.h"
 
 @interface FireUIPagedScrollView(hidden)
+
 -(void)_niceInit;
 -(void)_adjustSizesForPages;
 -(void)_adjustSizesForPages:(BOOL)animated;
@@ -19,7 +20,15 @@
 -(void)_adjustSizesForPagesCoreCompletion;
 @end
 
-@implementation FireUIPagedScrollView
+@implementation FireUIPagedScrollView {
+  NSMutableArray * _controllers;
+  NSInteger _currentPage;
+  BOOL _dontInferPagesFromScrollRange;
+  UIPageControl * _pageControl;
+  UISegmentedControl * _segmentedControl;
+  BOOL _ignoreValueChangedEvent;
+}
+
 @synthesize pagerDelegate;
 
 - (id)init
@@ -63,12 +72,10 @@
 }
 
 -(void)dealloc {
-    [_controllers release];
     self.pagerDelegate = nil;
     self.delegate = nil;
     self.segmentedControl = nil;
     self.pageControl = nil;
-    [super dealloc];
 }
 
 
@@ -218,8 +225,7 @@
     if(_pageControl != nil) {
         [_pageControl removeTarget:self action:@selector(paginationControlChanged:) forControlEvents:UIControlEventValueChanged];
     }
-    [_pageControl release];
-    _pageControl = [pageControl retain];
+    _pageControl = pageControl;
     if(_pageControl != nil) {
         [_pageControl addTarget:self action:@selector(paginationControlChanged:) forControlEvents:UIControlEventValueChanged];
     }
@@ -231,8 +237,7 @@
     if(_segmentedControl != nil) {
         [_segmentedControl removeTarget:self action:@selector(paginationControlChanged:) forControlEvents:UIControlEventValueChanged];
     }
-    [_segmentedControl release];
-    _segmentedControl = [segmentedControl retain];
+    _segmentedControl = segmentedControl;
     if(_segmentedControl != nil) {
         [_segmentedControl addTarget:self action:@selector(paginationControlChanged:) forControlEvents:UIControlEventValueChanged];
     }

@@ -20,16 +20,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    RootViewController* firstVC = [[[RootViewController alloc]
-                                    initWithNibName:@"RootViewController" bundle:nil] autorelease];
-    WelcomeDetailsController* welcome = [[[WelcomeDetailsController alloc]
-                                    initWithNibName:@"WelcomeDetailsController" bundle:nil] autorelease];
+    RootViewController* firstVC = [[RootViewController alloc]
+                                    initWithNibName:@"RootViewController" bundle:nil];
+    WelcomeDetailsController* welcome = [[WelcomeDetailsController alloc]
+                                    initWithNibName:@"WelcomeDetailsController" bundle:nil];
     
     
-    UINavigationController* secondVC = [[[UINavigationController alloc] initWithRootViewController:welcome] autorelease];
+    UINavigationController* secondVC = [[UINavigationController alloc] initWithRootViewController:welcome];
     firstVC.detailViewController = secondVC;
     
-    self.splitViewController = [[[UISplitViewController alloc] init] autorelease];
+    self.splitViewController = [[UISplitViewController alloc] init];
     self.splitViewController.viewControllers = [NSArray arrayWithObjects:firstVC, secondVC, nil];
     
     
@@ -77,15 +77,6 @@
      Save data if appropriate.
      See also applicationDidEnterBackground:.
      */
-}
-
-- (void)dealloc
-{
-    [_window release];
-    [_splitViewController release];
-    [_rootViewController release];
-    [_detailViewController release];
-    [super dealloc];
 }
 
 @end

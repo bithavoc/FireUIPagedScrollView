@@ -41,7 +41,7 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     switch (indexPath.row) {
         case kSimpleRow:
@@ -65,19 +65,16 @@
         case kSimpleRow: {
             SimplePagesView *detailViewController = [[SimplePagesView alloc] initWithNibName:@"SimplePagesView" bundle:nil];
             [self.navigationController pushViewController:detailViewController animated:YES];
-            [detailViewController release];
             break;
         }
         case kOrientationReadyRow: {
             OrientationReadyPagesView *detailViewController = [[OrientationReadyPagesView alloc] initWithNibName:@"OrientationReadyPagesView" bundle:nil];
             [self.navigationController pushViewController:detailViewController animated:YES];
-            [detailViewController release];
             break;
         }
         case kVisualsControlsReadyRow: {
             VisualsReadyView *detailViewController = [[VisualsReadyView alloc] initWithNibName:@"VisualsReadyView" bundle:nil];
             [self.navigationController pushViewController:detailViewController animated:YES];
-            [detailViewController release];
             break;
         }
         default:

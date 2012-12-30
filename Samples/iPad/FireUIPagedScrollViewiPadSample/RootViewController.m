@@ -50,7 +50,7 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
 
     switch (indexPath.row) {
@@ -74,12 +74,12 @@
     [self.detailViewController popViewControllerAnimated:NO];
     switch (indexPath.row) {
         case kSimplePages: {
-            SimpleSampleView * sampleView = [[[SimpleSampleView alloc] initWithNibName:@"SimpleSampleView" bundle:nil] autorelease];
+            SimpleSampleView * sampleView = [[SimpleSampleView alloc] initWithNibName:@"SimpleSampleView" bundle:nil];
             [self.detailViewController pushViewController:sampleView animated:YES];
             break;
         }
         case kVisualsReadyPages: {
-            VisualsReadySampleView * sampleView = [[[VisualsReadySampleView alloc] initWithNibName:@"VisualsReadySampleView" bundle:nil] autorelease];
+            VisualsReadySampleView * sampleView = [[VisualsReadySampleView alloc] initWithNibName:@"VisualsReadySampleView" bundle:nil];
             [self.detailViewController pushViewController:sampleView animated:YES];
             break;
         }
@@ -87,12 +87,6 @@
             break;
     }
     
-}
-
-- (void)dealloc
-{
-    [detailViewController release];
-    [super dealloc];
 }
 
 @end

@@ -8,6 +8,7 @@ Very nice UIScrollView ready to handle View Controllers as pages, handle orienta
 * Handles Orientation and Size changes automatically and with smooth animations.
 * Ready to work with [UIPageControl](http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIPageControl_Class/Reference/Reference.html) and [UISegmentedControl](http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UISegmentedControl_Class/Reference/UISegmentedControl.html)
 * Easy to use properties and methods (addPagedViewController, pageCount, currentPage, etc)
+* LLVM-ARC Enabled
 
 ## Screenshots
 
@@ -42,11 +43,11 @@ Let's setup you have three View controllers that you want to show as pages as fo
     {
     	[super viewDidLoad];
 		// Add Page 1
-	    [self.pagedScrollView addPagedViewController:[[[Page1ViewController alloc] initWithNibName:@"Page1View" bundle:nil] autorelease]];
+	    [self.pagedScrollView addPagedViewController:[[Page1ViewController alloc] initWithNibName:@"Page1View" bundle:nil];
 		// Add Page 2
-	    [self.pagedScrollView addPagedViewController:[[[Page2ViewController alloc] initWithNibName:@"Page2View" bundle:nil] autorelease]];
+	    [self.pagedScrollView addPagedViewController:[[Page2ViewController alloc] initWithNibName:@"Page2View" bundle:nil];
 		// Add Page 3
-	    [self.pagedScrollView addPagedViewController:[[[Page3ViewController alloc] initWithNibName:@"Page3View" bundle:nil] autorelease]];
+	    [self.pagedScrollView addPagedViewController:[[Page3ViewController alloc] initWithNibName:@"Page3View" bundle:nil];
     }
 
 ## Handling Orientation Changes
@@ -66,10 +67,14 @@ Get the source code and run the samples for iPhone or iPad:
 
 	    git clone git://github.com/firebaseco/FireUIPagedScrollView.git
 
+## ARC Compatibility
+
+Starting with 1.1, you will need to use Apple's LLVM Compiler and iOS 4.3 minimum.
+
+For projects pre iOS 4.3 still using GCC you can use the version [1.0](https://github.com/firebaseco/FireUIPagedScrollView/tree/v1.0) as a reference for your own implementation.
 
 ## Author
 Johan Hernandez: johan@firebase.co
-Drop me an email if you need anything, thanks!
 
 ## License
 

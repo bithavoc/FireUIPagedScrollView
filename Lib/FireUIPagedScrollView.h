@@ -11,29 +11,22 @@
 
 @protocol FireUIPagedScrollViewDelegate;
 
-@interface FireUIPagedScrollView : UIScrollView<UIScrollViewDelegate> {
-    NSMutableArray * _controllers;
-    NSInteger _currentPage;
-    BOOL _dontInferPagesFromScrollRange;
-    UIPageControl * _pageControl;
-    UISegmentedControl * _segmentedControl;
-    BOOL _ignoreValueChangedEvent;
-}
+@interface FireUIPagedScrollView : UIScrollView<UIScrollViewDelegate> 
 
 // Set the delegate to get notified when the current page is changed.
-@property (nonatomic, retain) IBOutlet id<FireUIPagedScrollViewDelegate> pagerDelegate;
+@property (nonatomic, strong) IBOutlet id<FireUIPagedScrollViewDelegate> pagerDelegate;
 
 // The current page index. (Zero based).
-@property (nonatomic, readwrite) NSInteger currentPage;
+@property (nonatomic) NSInteger currentPage;
 
 // The number of Pages.
 @property (nonatomic, readonly) NSInteger pageCount;
 
 // Set a UIPageControl to handle selection of Pages and provide visual feedback.
-@property (nonatomic, retain, readwrite) IBOutlet UIPageControl * pageControl;
+@property (nonatomic, strong) IBOutlet UIPageControl * pageControl;
 
 // Set a UISegmentedControl to handle selection of Pages and provide visual feedback.
-@property (nonatomic, retain, readwrite) IBOutlet UISegmentedControl * segmentedControl;
+@property (nonatomic, strong) IBOutlet UISegmentedControl * segmentedControl;
 
 // Adds a Controller.
 -(void)addPagedViewController:(UIViewController*)controller;
@@ -48,6 +41,7 @@
 -(void)willRotateToInterfaceOrientation;
 
 -(IBAction)paginationControlChanged:(id)sender;
+
 @end
 
 @protocol FireUIPagedScrollViewDelegate<NSObject>

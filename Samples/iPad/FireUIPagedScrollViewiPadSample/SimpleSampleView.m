@@ -17,9 +17,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.pagedScrollView addPagedViewController:[[[Page1View alloc] initWithNibName:@"Page1View" bundle:nil] autorelease]];
-    [self.pagedScrollView addPagedViewController:[[[Page2View alloc] initWithNibName:@"Page2View" bundle:nil] autorelease]];
-    [self.pagedScrollView addPagedViewController:[[[Page3View alloc] initWithNibName:@"Page3View" bundle:nil] autorelease]];
+    [self.pagedScrollView addPagedViewController:[[Page1View alloc] initWithNibName:@"Page1View" bundle:nil]];
+    [self.pagedScrollView addPagedViewController:[[Page2View alloc] initWithNibName:@"Page2View" bundle:nil] ];
+    [self.pagedScrollView addPagedViewController:[[Page3View alloc] initWithNibName:@"Page3View" bundle:nil]];
 }
 
 - (void)viewDidUnload
