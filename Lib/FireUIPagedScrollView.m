@@ -21,12 +21,12 @@
 @end
 
 @implementation FireUIPagedScrollView {
-  NSMutableArray * _controllers;
-  NSInteger _currentPage;
-  BOOL _dontInferPagesFromScrollRange;
-  UIPageControl * _pageControl;
-  UISegmentedControl * _segmentedControl;
-  BOOL _ignoreValueChangedEvent;
+    NSMutableArray * _controllers;
+    NSInteger _currentPage;
+    BOOL _dontInferPagesFromScrollRange;
+    UIPageControl * _pageControl;
+    UISegmentedControl * _segmentedControl;
+    BOOL _ignoreValueChangedEvent;
 }
 
 @synthesize pagerDelegate;
@@ -68,18 +68,9 @@
     self.showsHorizontalScrollIndicator = false;
     self.showsVerticalScrollIndicator = false;
     self.delegate = self;
-    
 }
 
--(void)dealloc {
-    self.pagerDelegate = nil;
-    self.delegate = nil;
-    self.segmentedControl = nil;
-    self.pageControl = nil;
-}
-
-
--(void)addPagedViewController:(UIViewController*)controller 
+-(void)addPagedViewController:(UIViewController*)controller
 {
     [self addPagedViewController:controller animated:YES];
 }
@@ -137,6 +128,10 @@
         CGFloat pageWidth = self.frame.size.width;
         int page = floor((self.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
         self.currentPage = page;
+        
+        if([pagerDelegate respondsToSelector:@selector(firePagerChanged:pagesCount:currentPageIndex:)]) {
+            [pagerDelegate firePagerChanged:self pagesCount:self.pageCount currentPageIndex:self.currentPage];
+        }
     }
 }
 
@@ -166,6 +161,7 @@
         _pageControl.currentPage = _currentPage;
     }
     if(_pageControl != nil) {
+        NSLog(@"Page count: %i", self.pageCount);
         _pageControl.numberOfPages = self.pageCount;
     }
     _ignoreValueChangedEvent = NO;
@@ -188,21 +184,6 @@
 
 -(void)willRotateToInterfaceOrientation {
     _dontInferPagesFromScrollRange = true;
-    UIDevice *device = [UIDevice currentDevice];					//Get the device object
-	[device beginGeneratingDeviceOrientationNotifications];			//Tell it to start monitoring the accelerometer for orientation
-	NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];	//Get the notification centre for the app
-	[nc addObserver:self											//Add yourself as an observer
-		   selector:@selector(orientationChanged:)
-			   name:UIDeviceOrientationDidChangeNotification
-			 object:device];
-}
-- (void)orientationChanged:(NSNotification *)note
-{   
-    [self _adjustSizesForPages];
-    
-    UIDevice *device = [UIDevice currentDevice];
-    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
-    [nc removeObserver:self name:UIDeviceOrientationDidChangeNotification object:device];
 }
 
 -(void)paginationControlChanged:(id)sender {
@@ -230,16 +211,5 @@
         [_pageControl addTarget:self action:@selector(paginationControlChanged:) forControlEvents:UIControlEventValueChanged];
     }
 }
--(UISegmentedControl*) segmentedControl {
-    return _segmentedControl;
-}
--(void)setSegmentedControl:(UISegmentedControl *)segmentedControl {
-    if(_segmentedControl != nil) {
-        [_segmentedControl removeTarget:self action:@selector(paginationControlChanged:) forControlEvents:UIControlEventValueChanged];
-    }
-    _segmentedControl = segmentedControl;
-    if(_segmentedControl != nil) {
-        [_segmentedControl addTarget:self action:@selector(paginationControlChanged:) forControlEvents:UIControlEventValueChanged];
-    }
-}
+
 @end
