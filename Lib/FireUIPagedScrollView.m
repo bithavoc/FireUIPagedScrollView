@@ -12,8 +12,8 @@
 @interface FireUIPagedScrollView(hidden)
 
 -(void)_niceInit;
--(void)_adjustSizesForPages;
--(void)_adjustSizesForPages:(BOOL)animated;
+-(void)_adjustSizesForPages:(UIViewController *)removedControllerOrNil;
+-(void)_adjustSizesForPages:(UIViewController *)removedControllerOrNil animated:(BOOL)animated;
 -(void)_notifyPageChanged;
 -(void)_showPage:(NSInteger)pageIndex animated:(BOOL)animated;
 -(void)_adjustSizesForPagesCoreInit;
@@ -21,12 +21,12 @@
 @end
 
 @implementation FireUIPagedScrollView {
-  NSMutableArray * _controllers;
-  NSInteger _currentPage;
-  BOOL _dontInferPagesFromScrollRange;
-  UIPageControl * _pageControl;
-  UISegmentedControl * _segmentedControl;
-  BOOL _ignoreValueChangedEvent;
+    NSMutableArray * _controllers;
+    NSInteger _currentPage;
+    BOOL _dontInferPagesFromScrollRange;
+    UIPageControl * _pageControl;
+    UISegmentedControl * _segmentedControl;
+    BOOL _ignoreValueChangedEvent;
 }
 
 @synthesize pagerDelegate;
@@ -51,7 +51,7 @@
 
 -(void)setFrame:(CGRect)frame {
     [super setFrame:frame];
-    [self _adjustSizesForPages];
+    [self _adjustSizesForPages:nil];
 }
 
 -(id)initWithCoder:(NSCoder *)aDecoder {
@@ -79,7 +79,7 @@
 }
 
 
--(void)addPagedViewController:(UIViewController*)controller 
+-(void)addPagedViewController:(UIViewController*)controller
 {
     [self addPagedViewController:controller animated:YES];
 }
@@ -89,27 +89,56 @@
     if(controller != nil && controller.view != nil) {
         [_controllers addObject:controller];
         [self addSubview:controller.view];
-        [self _adjustSizesForPages:animated];
+        [self _adjustSizesForPages:nil animated:animated];
         [self _notifyPageChanged];
     }
 }
 
--(void)_adjustSizesForPages {
-    [self _adjustSizesForPages:YES];
+-(void)removePagedViewControllerAtIndex:(NSUInteger)index
+{
+    [self removePagedViewControllerAtIndex:index animated:YES];
 }
 
--(void)_adjustSizesForPages:(BOOL)animated {
+-(void)removePagedViewControllerAtIndex:(NSUInteger)index animated:(BOOL)animated
+{
+    UIViewController *controller = [_controllers objectAtIndex:index];
+    
+    [_controllers removeObjectAtIndex:index];
+    [self _adjustSizesForPages:controller animated:animated];
+    [self _notifyPageChanged];
+}
+
+-(void)_adjustSizesForPages:(UIViewController *)removedControllerOrNil {
+    [self _adjustSizesForPages:removedControllerOrNil animated:YES];
+}
+
+-(void)_adjustSizesForPages:(UIViewController *)removedControllerOrNil animated:(BOOL)animated {
     if(animated) {
-        [UIView animateWithDuration:0.5
+        
+        NSTimeInterval duration = 0.5;
+        
+        if(removedControllerOrNil) {
+            duration = 0.25;
+        }
+        
+        [UIView animateWithDuration:duration
                               delay: 0.0
                             options: UIViewAnimationOptionCurveEaseIn
                          animations:^{
                              [self _adjustSizesForPagesCoreInit];
                          }
                          completion:^(BOOL finished){
+                             if(removedControllerOrNil) {
+                                 [removedControllerOrNil.view removeFromSuperview];
+                             }
+                             
                              [self _adjustSizesForPagesCoreCompletion];
                          }];
     } else {
+        if(removedControllerOrNil) {
+            [removedControllerOrNil.view removeFromSuperview];
+        }
+        
         [self _adjustSizesForPagesCoreInit];
         [self _adjustSizesForPagesCoreCompletion];
     }
@@ -197,8 +226,8 @@
 			 object:device];
 }
 - (void)orientationChanged:(NSNotification *)note
-{   
-    [self _adjustSizesForPages];
+{
+    [self _adjustSizesForPages:nil];
     
     UIDevice *device = [UIDevice currentDevice];
     NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];

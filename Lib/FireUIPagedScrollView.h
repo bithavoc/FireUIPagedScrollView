@@ -34,6 +34,12 @@
 // Adds a Controller indicating whether the action should be animated.
 -(void)addPagedViewController:(UIViewController*)controller animated:(BOOL)animated;
 
+// Removes a Controller.
+-(void)removePagedViewControllerAtIndex:(NSUInteger)index;
+
+// Removes a Controller indicating whether the action should be animated.
+-(void)removePagedViewControllerAtIndex:(NSUInteger)index animated:(BOOL)animated;
+
 // Shows a Specific Page Index
 -(void)gotoPage:(NSInteger)pageIndex animated:(BOOL)animated;
 
@@ -47,6 +53,6 @@
 @protocol FireUIPagedScrollViewDelegate<NSObject>
 @optional
 
-// Occurs when the current page is changed or a new page is added. Use this callback to update your visual control(in case you dont want to use pageControl or segmentedControl properties)
+// Occurs when the current page is changed, a new page is added or a page removed. Use this callback to update your visual control(in case you dont want to use pageControl or segmentedControl properties)
 -(void)firePagerChanged:(FireUIPagedScrollView*)pager pagesCount:(NSInteger)pagesCount currentPageIndex:(NSInteger)currentPageIndex;
 @end
